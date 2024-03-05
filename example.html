@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button</title>
+    <style>
+        .container{
+            padding: 30px;
+        }
+        .form-control{
+            position: relative;
+            display: block;
+            width: 100%;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            font-size: 24px;
+        }
+
+        .custom-radio{
+            width: 24px;
+            height: 24px;
+            background-color: #ddd;
+            position: absolute;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        .form-control:hover .custom-radio{
+            background-color: #ccc;
+        }
+        
+        .form-control input:checked ~ .custom-radio{
+            background-color: green;
+        }
+
+        .form-control input:checked ~.custom-radio::after{
+            display: block;
+        }
+
+        .form-control input{
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .custom-radio:after{
+            width: 8px;
+            height: 8px;
+            content: "";
+            background: white;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            border-radius: 50%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Custom Radio Button</h1>
+        <label class="form-control">Radio-1
+            <input type="radio" checked="checked" name="radio-button-1" value="radio-button-1">
+            <span class="custom-radio"></span>
+        </label>
+
+        <label class="form-control">Radio-2
+            <input type="radio" checked="checked" name="radio-button-1" value="radio-button-1">
+            <span class="custom-radio"></span>
+        </label>
+        
+
+        <label class="form-control">Radio-3
+            <input type="radio" checked="checked" name="radio-button-1" value="radio-button-1">
+            <span class="custom-radio"></span>
+        </label>
+
+
+    </div>
+</body>
+</html>
